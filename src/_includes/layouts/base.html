@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>{{ title }}</title>
+    {# {% if description %}
+    <meta name="description" content="{{description}}" />
+    {% endif %} {% block head %}{% endblock %} #}
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css" />
+  </head>
+  <body class="">
+    {% include "partials/header.html" %}
+
+    <main tabindex="-1" id="main-content">
+      {% block content %}{% endblock %}
+    </main>
+
+    {% include "partials/footer.html" %}
+
+    <script src="/static/js/alpine.js"></script>
+
+    {% if path == "home" %}
+    <!-- Netlify Identity Widget -->
+    <!-- Needed only if you are using Netlify Identity feature -->
+    <script
+      type="text/javascript"
+      src="https://identity.netlify.com/v1/netlify-identity-widget.js"
+    ></script>
+    {% endif %}
+  </body>
+</html>
