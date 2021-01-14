@@ -1,0 +1,9 @@
+{% for item in navigation.items %}
+    <li class="h-12 w-full lg:w-auto lg:h-full">
+        <a
+            class="flex items-center justify-center h-full px-5"
+            href="{{ item.url }}"
+            {{ helpers.getLinkActiveState(item.url, page.url) | safe }}
+        >{{ item.text }}</a>
+    </li>
+{% endfor %}
