@@ -1,8 +1,18 @@
 {% extends "layouts/base.html" %}
 
 {% block content %}
-    <article>
-        <h1>{{ title }}</h1>
-        {{ content | safe }}
+    <h1 class="sr-only">{{ title }}</h1>
+    <article class="">
+        <div class="">
+            <p class="">{{ intro.text }}</p>
+            <a href="{{ intro.buttonUrl }}" class="button">{{ intro.buttonText }}</a>
+        </div>
+        <div class="">
+            <img
+                class=""
+                src="{{ intro.image }}"
+                alt="{{ intro.imageAlt }}"
+            />
+        </div>
     </article>
 {% endblock %}
