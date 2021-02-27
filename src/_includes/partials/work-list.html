@@ -1,14 +1,14 @@
 <div class="" id="work-list">
   <div class="">
     {% if workListHeadline %}
-    <h2 class="" data-highlight="primary">
+    <h2 class="">
       {{ workListHeadline }}
     </h2>
     {% endif %}
     <div>
       <ol class="">
         {% for item in workListItems %}
-        <li class="[">
+        <li class="">
           <a href="{{ item.url }}" class="work-list__link">{{ item.data.title }}</a>
         </li>
         {% endfor %}

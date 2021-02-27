@@ -12,57 +12,62 @@ public_folder: "/static/img"
 local_backend: true
 # publish_mode: editorial_workflow
 collections:
-  - label: "Blog"
-    name: "blog"
-    folder: "src/posts"
+  - label: "Work"
+    name: "work"
+    folder: "src/work"
     create: true
     editor:
       preview: false
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Description", name: "description", widget: "string" }
-      - { label: "Author", name: "author", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - label: "Size"
+        name: "size"
+        widget: "string"
+        required: false
+        hint: "ie. 500mm x 300mm"
+      - label: "Featured"
+        name: "featured"
+        widget: "boolean"
+        default: false
+        required: false
+        hint: "If set will show on featured work section on homepage page, probably best to limit this to just a few."
+      - label: "Display Order"
+        name: "displayOrder"
+        widget: "number"
+        value_type: "int"
+        min: 1
+        max: 101
+        required: false
+        hint: "If you've selected featured this will decide the order they are displayed."
+      - label: "Commission"
+        name: "commission"
+        widget: "boolean"
+        default: false
+        required: false
+        hint: "If set will show on commissions page"
       - widget: select
-        label: "tags"
+        label: "Tags"
         name: "tags"
         multiple: true
         create: true
-        options: ["Tags", "created", "from", "config.yml"]
-  - label: "Settings"
-    name: "settings"
-    editor:
-      preview: false
-    files:
-      - label: "Navigation"
-        name: "items"
-        file: "src/_data/navigation.yaml"
-        fields:
-          - label: Nav Items
-            name: items
-            widget: list
-            allow_add: false
-            collapsed: false
-            fields:
-              - { label: Title, name: text, widget: string }
-              - { label: URL, name: url, widget: string }
-      - label: "Quick Links"
-        name: "links"
-        file: "src/_data/quicklinks.yaml"
-        fields:
-          - label: Nav Items
-            name: links
-            widget: list
-            collapsed: false
-            fields:
-              - { label: Title, name: title, widget: string }
-              - { label: URL, name: url, widget: string }
-              - { label: Description, name: desc, widget: string }
-      - label: "Meta Settings"
-        name: "settings"
-        file: "src/_data/settings.yaml"
-        fields:
-          - { label: Name, name: name, widget: string }
-          - { label: Author, name: author, widget: string }
-          - { label: URL, name: url, widget: string }
+        required: false
+        options: ["birds", "portrait", "commission", "lanscape", "abstract"]
+      - { label: "Body", name: "body", widget: "markdown" }
+      - label: "Thumbnail Image"
+        name: "thumbnail"
+        widget: "image"
+        required: false
+        allow_multiple: false
+      - label: "Main Image"
+        name: "mainImage"
+        widget: "image"
+        required: false
+        allow_multiple: false
+      - label: "Gallery"
+        name: "gallery"
+        widget: "image"
+        required: false
+        media_library:
+          config:
+            multiple: true

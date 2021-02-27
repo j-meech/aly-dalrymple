@@ -10,7 +10,7 @@ module.exports = function (eleventyConfig) {
 
   // human readable date
   eleventyConfig.addFilter("readableDate", (value) => {
-    return DateTime.fromJSDate(value, { zone: "utc" }).toFormat("dd LLL yyyy");
+    return DateTime.fromJSDate(value, { zone: "utc" }).toFormat("LLLL yyyy");
   });
 
   // w3date
@@ -36,6 +36,13 @@ module.exports = function (eleventyConfig) {
   // Returns a collection of work in reverse date order
   eleventyConfig.addCollection("work", (collection) => {
     return [...collection.getFilteredByGlob("./src/work/*.md")].reverse();
+  });
+
+  // Returns work items filtered by commissions
+  eleventyConfig.addCollection("commissions", (collection) => {
+    return collection
+      .getFilteredByGlob("./src/work/*.md")
+      .filter((x) => x.data.commission);
   });
 
   // Returns work items, sorted by display order then filtered by featured

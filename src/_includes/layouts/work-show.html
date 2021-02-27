@@ -2,7 +2,7 @@
 
 {% set pageHeaderTitle = title %}
 
-{# Grab other posts that aren’t this one for the 'more from the blog' feed #}
+{# Grab other work that isn’t this one for the 'more work' feed #}
 {% set recommendedWork = helpers.getSiblingContent(collections.work, page) %}
 
 {# Render post date and any tags that this post has been filed under #}
@@ -31,7 +31,7 @@
     {% if recommendedWork %}
         <footer class="">
             {% set workListItems = recommendedWork %}
-            {% set workListHeadline = 'More from work you might like.' %}
+            {% set workListHeadline = 'More work you might like.' %}
             {% include "partials/work-list.html" %}
         </footer>
     {% endif %}

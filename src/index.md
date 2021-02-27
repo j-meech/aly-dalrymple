@@ -1,5 +1,6 @@
 ---
 title: "Aly Dalrymple Textile Artist"
+metaDesc: "I'm a textile artist based in Bristol working with free machine embroidery and mixed media."
 layout: "layouts/home.html"
 intro:
   title: ""

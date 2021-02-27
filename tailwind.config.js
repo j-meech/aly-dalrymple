@@ -7,6 +7,9 @@ module.exports = {
     },
   },
   theme: {
+    fontFamily: {
+      sans: ["Karla", "sans-serif"],
+    },
     container: {
       center: true,
     },
