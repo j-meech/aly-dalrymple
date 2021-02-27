@@ -1,0 +1,26 @@
+{% if textImageContent %}
+    {% set textImage = textImageContent %}
+{% endif %}
+
+<article class="">
+    <div class="">
+    {% if textImage.title %}
+        <h2 class="" >{{ textImage.title }}</h2>
+    {% endif %}
+    <p class="">{{ textImage.summary }}</p>
+    {% if textImage.buttonUrl %}
+        <div class="">
+            <a class="button" href="{{ textImage.buttonUrl }}">{{ textImage.buttonText }}</a>
+        </div>
+    {% endif %}
+    </div>
+    {% if textImage.imgUrl %}
+    <div class="">
+        <img
+            class=""
+            src="{{ textImage.imageUrl }}"
+            alt="{{ textImage.imageAlt }}"
+        />
+    </div>
+    {% endif %}
+</article>

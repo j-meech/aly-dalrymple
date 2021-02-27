@@ -5,16 +5,16 @@
       "url": "/about/"
     },
     {
-      "text": "Commissions",
-      "url": "/commissions/"
-    },
-    {
       "text": "Work",
       "url": "/work/"
     },
     {
+      "text": "Commissions",
+      "url": "/commissions/"
+    },
+    {
       "text": "Contact",
-      "url": "/#contact/"
+      "url": "/contact/"
     }
   ]
 }

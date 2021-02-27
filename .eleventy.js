@@ -48,11 +48,11 @@ module.exports = function (eleventyConfig) {
   // Let Eleventy transform HTML files as nunjucks
   // So that we can use .html instead of .njk
   return {
-    dir: {
-      input: "src",
-    },
     markdownTemplateEngine: "njk",
     dataTemplateEngine: "njk",
     htmlTemplateEngine: "njk",
+    dir: {
+      input: "src",
+    },
   };
 };
