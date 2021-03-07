@@ -2,25 +2,29 @@
     {% set textImage = textImageContent %}
 {% endif %}
 
-<article class="">
-    <div class="">
-    {% if textImage.title %}
-        <h2 class="" >{{ textImage.title }}</h2>
+<article class="mx-auto my-5 md:my-20 max-w-screen-lg 2xl:max-w-screen-xl px-5 flex flex-col md:flex-row md:odd:flex-row-reverse">
+    {% if textImage.imageUrl %}
+    <div class="w-full md:w-1/2">
+        <div class="is-fixed-ar is-1x1">
+            <div class="ar-inside bg-gray-200">
+                <img
+                    class="w-full h-full absolute top-0 left-0 object-cover object-center"
+                    src="{{ textImage.imageUrl }}"
+                    alt="{{ textImage.imageAlt }}"
+                />
+            </div>
+        </div>
+    </div>
     {% endif %}
-    <p class="">{{ textImage.summary }}</p>
+    <div class="w-full md:w-1/2 md:px-10 pt-5 md:pt-0">
+    {% if textImage.title %}
+        <h2 class="text-2xl md:text-4xl font-semibold tracking-wide mb-2.5 md:mb-5" >{{ textImage.title }}</h2>
+    {% endif %}
+        <p class="">{{ textImage.summary }}</p>
     {% if textImage.buttonUrl %}
         <div class="">
             <a class="button" href="{{ textImage.buttonUrl }}">{{ textImage.buttonText }}</a>
         </div>
     {% endif %}
     </div>
-    {% if textImage.imgUrl %}
-    <div class="">
-        <img
-            class=""
-            src="{{ textImage.imageUrl }}"
-            alt="{{ textImage.imageAlt }}"
-        />
-    </div>
-    {% endif %}
 </article>

@@ -14,10 +14,23 @@ module.exports = {
       center: true,
     },
     extend: {
-      colors: {},
+      colors: {
+        sage: {
+          dark: "#90A68B",
+          light: "#9FB49C",
+        },
+        grey: {
+          dark: "#444444",
+        },
+      },
     },
   },
-  variants: {},
+  variants: {
+    extend: {
+      flex: ["responsive", "odd"],
+      flexDirection: ["responsive", "odd"],
+    },
+  },
   plugins: [require("@tailwindcss/typography")],
   experimental: "all",
   future: {

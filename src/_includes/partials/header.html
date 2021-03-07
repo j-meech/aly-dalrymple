@@ -1,13 +1,10 @@
 <a class="sr-only" href="#main-content">Skip to content</a>
 <header
   role="banner"
-  class="fixed z-20 w-full h-14 lg:h-20"
-  x-data="{ scrollAtTop: true }"
-  :class="{ 'bg-white' : !scrollAtTop, 'bg-transparent' : scrollAtTop }"
-  @scroll.window="scrollAtTOp = (window.pageYOffset > 80) ? false : true"
+  class="fixed z-20 w-full h-14 lg:h-20 bg-white"
   >
   <div class="w-full h-full mx-auto lg:max-w-screen-2xl lg:px-5 flex items-center justify-between ">
-    <a href="/" aria-label="{{ site.name }} - home" class="h-full px-5 flex items-center justify-center font-bold text-lg">Aly Dalrymple</a>
+    <a href="/" aria-label="{{ site.name }} - home" class="h-full px-5 flex items-center justify-center font-semibold text-xl tracking-wide">Aly Dalrymple</a>
     <nav
       class="h-full"
       aria-label="Primary"
@@ -45,7 +42,7 @@
       </button>
       <!--Mobile Menu-->
       <div
-        class="absolute top-14 left-0 right-0 bottom-0 z-10"
+        class="absolute top-14 left-0 w-screen h-screen z-10 bg-white"
         :class="{ 'block': isOpen, 'hidden': !isOpen }"
         @click.away="isOpen = false"
         x-show.transition="true"

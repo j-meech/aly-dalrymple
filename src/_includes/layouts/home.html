@@ -1,14 +1,26 @@
 {% extends "layouts/base.html" %}
 
 {% block content %}
-    <h1 class="sr-only">{{ title }}</h1>
+    <div class="mx-auto mb-5 md:mb-20 max-w-screen-lg 2xl:max-w-screen-xl px-5">
+        <div class="is-fixed-ar is-3x2">
+            <div class="ar-inside bg-gray-200">
+                <img
+                    class="w-full h-full absolute top-0 left-0 object-cover object-center"
+                    src="{{ mainImage1240 }}"
+                    alt=""
+                />
+            </div>
+        </div>
+    </div>
 
-    {% set textImageContent = intro %}
-    {% include "partials/text-image.html" %}
+    <div>
+        {% set textImageContent = intro %}
+        {% include "partials/text-image.html" %}
 
-    {% set textImageContent = work %}
-    {% include "partials/text-image.html" %}
+        {% set textImageContent = work %}
+        {% include "partials/text-image.html" %}
 
-    {% set textImageContent = commissions %}
-    {% include "partials/text-image.html" %}
+        {% set textImageContent = commissions %}
+        {% include "partials/text-image.html" %}
+    </div>
 {% endblock %}
