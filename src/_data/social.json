@@ -1,0 +1,14 @@
+{
+    "items": [
+        {
+            "text": "Instagram",
+            "url": "/about/",
+            "icon": ""
+          },
+          {
+            "text": "Facebook",
+            "url": "/work/",
+            "icon": ""
+          }
+    ]
+}
