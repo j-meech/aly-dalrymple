@@ -1,9 +1,23 @@
 {% for item in navigation.items %}
-    <li class="h-12 w-full lg:w-auto lg:h-full">
+    <li class="md:mb-1">
         <a
-            class="flex items-center justify-center h-full px-5 font-light text-base tracking-wide uppercase hover:text-sage-dark"
+            class="font-light text-base leading-8 md:leading-6 tracking-wide border-b border-grey-dark border-opacity-0 transition hover:border-opacity-100"
             href="{{ item.url }}"
             {{ helpers.getLinkActiveState(item.url, page.url) | safe }}
         >{{ item.text }}</a>
+    </li>
+{% endfor %}
+{% for item in social.items %}
+    <li class="md:mb-0.5 mt-5 inline-block mr-1 border-b border-grey-dark border-opacity-0 transition hover:border-opacity-100">
+        <a
+            class="inline-block text-grey-dark"
+            href="{{ item.url }}"
+        >
+        {% if item.icon === 'facebook' %}
+            {% include "partials/icon-facebook.html" %}
+        {% elif item.icon === 'instagram' %}
+            {% include "partials/icon-instagram.html" %}
+        {% endif %}
+        </a>
     </li>
 {% endfor %}

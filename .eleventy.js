@@ -33,6 +33,9 @@ module.exports = function (eleventyConfig) {
   // Copy Image Folder to /_site
   eleventyConfig.addPassthroughCopy("./src/static/img");
 
+  // Copy Svg Folder to /_site
+  eleventyConfig.addPassthroughCopy("./src/static/svg");
+
   // Returns a collection of work in reverse date order
   eleventyConfig.addCollection("work", (collection) => {
     return [...collection.getFilteredByGlob("./src/work/*.md")].reverse();

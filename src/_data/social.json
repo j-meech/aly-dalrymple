@@ -2,13 +2,13 @@
     "items": [
         {
             "text": "Instagram",
-            "url": "/about/",
-            "icon": ""
+            "url": "https://www.instagram.com/aly.dalrymple/",
+            "icon": "instagram"
           },
           {
             "text": "Facebook",
-            "url": "/work/",
-            "icon": ""
+            "url": "https://www.facebook.com/Alydalrympledesigner",
+            "icon": "facebook"
           }
     ]
 }

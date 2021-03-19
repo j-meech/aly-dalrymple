@@ -15,6 +15,7 @@ module.exports = {
     },
     extend: {
       colors: {
+        'off-white': '#fffefb',
         sage: {
           dark: "#90A68B",
           light: "#9FB49C",
