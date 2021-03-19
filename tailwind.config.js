@@ -31,7 +31,11 @@ module.exports = {
       flexDirection: ["responsive", "odd"],
     },
   },
-  plugins: [require("@tailwindcss/typography")],
+  plugins: [
+    require('@tailwindcss/aspect-ratio'), 
+    require('@tailwindcss/forms'), 
+    require("@tailwindcss/typography")
+  ],
   experimental: "all",
   future: {
     purgeLayersByDefault: true,
