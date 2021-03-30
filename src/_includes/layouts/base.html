@@ -9,18 +9,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/static/css/style.css" />
   </head>
-  <body class="font-sans text-grey-dark h-full flex flex-col">
-    {% include "partials/header.html" %}
+  <body class="font-sans text-grey-dark h-full">
+    <div class="max-w-screen-xl mx-auto h-full flex flex-col">    
+      {% include "partials/header.html" %}
 
-    <h1 class="sr-only">{{ title }}</h1>
+      <h1 class="sr-only">{{ title }}</h1>
 
-    <main tabindex="-1" id="main-content" class=" h-full flex flex-col w-full md:pl-52 lg:pl-72 pt-14 md:pt-5">
-      <div class="flex-grow">
-        {% block content %}{% endblock %}
-      </div>
-      {% include "partials/footer.html" %}
+      <main tabindex="-1" id="main-content" class="h-full flex flex-col w-full md:pl-52 lg:pl-72 pt-14 md:pt-5">
+        <div class="flex-grow px-5">
+          {% block content %}{% endblock %}
+        </div>
+        {% include "partials/footer.html" %}
     </main>
-
+    </div>
 
     <script src="/static/js/alpine.js"></script>
 

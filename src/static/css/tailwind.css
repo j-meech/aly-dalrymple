@@ -11,7 +11,11 @@
   @apply inline-block my-2 py-2 text-sage-dark hover:text-sage-light font-light text-base tracking-wide uppercase;
 }
 
-.is-fixed-ar {
+.full-bg-cover {
+  @apply w-full h-full absolute top-0 left-0 object-cover object-center;
+}
+
+/* .is-fixed-ar {
   width: 100%;
   position: relative;
 }
@@ -54,4 +58,4 @@
   left: 0;
   width: 100%;
   height: 100%;
-}
+} */
